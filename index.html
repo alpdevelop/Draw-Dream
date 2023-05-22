@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Draw</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="column tools">
+            <div id="ring"><i class="fa-solid fa-paintbrush fa-rotate-270 fa-2xl"></i></div>
+            <div id="save"><i class="fa-regular fa-floppy-disk fa-2xl"></i></div>
+        </div>
+        <div class="column brush">
+            <p id="brushTextValue">10px</p>
+            <label for="brushValue"></label>
+            <input class="brushValue" type="range" min="1" max="50" value="10">
+        </div>
+        <div class="column">
+            <div class="circle black" data-color="#000000"></div>
+            <div class="circle red" data-color="#FF0000"></div>
+            <div class="circle green" data-color="#90ee90"></div>
+            <label for="stroke"></label>
+            <input type="color" class="color margin" id="stroke">
+            <a class="duster margin"><i class="fa-solid fa-eraser fa-xl"></i></a>
+            <a class="delete margin"><i class="fa-solid fa-trash fa-xl"></i></a>
+        </div>
+    </div>
+    <canvas class="canvas" width="1920px" height="1080px"></canvas>
+    <script src='app.js'></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>
